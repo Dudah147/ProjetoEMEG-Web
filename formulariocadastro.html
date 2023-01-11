@@ -1,0 +1,588 @@
+<!DOCTYPE html>
+<html lang="pt_BR">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Cadastro</title>
+    <link rel="stylesheet" href="css/formulariocadastro.css">
+</head>
+
+<body>
+    <!-- Cabeçalho -->
+    <header>
+        <picture>
+            <a href="Pagina_Inicial.html">
+            <source media="(max-width): 780px" src="img/logom.png" class="logo">
+            <source media="(max-width): 1024px" src="img/logo.png" class="logo">
+            <img src="img/logo.png" alt="logo" class="logo"></a>
+        </picture>
+        <nav>
+            <a href="Pagina_Inicial.html" class="pagina">Home</a>
+            <a href="Pagina_Produtos.html" class="pagina">Produtos</a>
+            <a href="contato.html" class="pagina">Contato</a>
+            <a href="formulariocadastro.html" class="pagina">Cadastro</a>
+            <a href="login.html" class="pagina" id="login">Login</a>
+            <a href="carrinho.html" class="pagina ultimo"><img src="img/carrinho_nav.png" id="img_carrinho_nav" alt="carrinho">
+            <span id="quantidade_carrinho"></span>
+            </a>
+            
+        </nav>
+    </header>
+    <br>
+    <!-- /Cabeçalho -->
+
+    <!-- Cadastro -->
+    <main>
+        <div class="cadastro">
+            <form id="form" action="login.html">
+                <div class="topo">
+                    <h2>Cadastro</h2>
+                </div>
+                <div class="input-group">
+                    <legend>Dados Pessoais</legend>
+                    <div class="input-box">
+                        <label>Nome:</label>
+                        <input type="text" name="nome" id="name">
+                        <i class="img-success"><img src="img/success-icon.svg" alt=""></i>
+                        <i class="img-error"><img src="img/error-icon.svg" alt=""></i>
+
+                        <small>Error message</small>
+                    </div>
+                    <div class="input-box">
+                        <label>CPF:</label>
+                        <input type="text" name="cpf" id="cpf" placeholder="123.456.789-10">
+                        <i class="img-success"><img src="img/success-icon.svg" alt=""></i>
+                        <i class="img-error"><img src="img/error-icon.svg" alt=""></i>
+
+                        <small>Error message</small>
+                    </div>
+                    <div class="input-box">
+                        <label>Data de Nascimento:</label>
+                        <input type="text" name="nascimento" id="nascimento" placeholder="DD/MM/YYYY">
+                        <i class="img-success"><img src="img/success-icon.svg" alt=""></i>
+                        <i class="img-error"><img src="img/error-icon.svg" alt=""></i>
+
+                        <small>Error message</small>
+                    </div>
+                    <div class="input-box">
+                        <label>E-mail:</label>
+                        <input type="email" name="email" id="email" placeholder="exemplo@email.com">
+                        <i class="img-success"><img src="img/success-icon.svg" alt=""></i>
+                        <i class="img-error"><img src="img/error-icon.svg" alt=""></i>
+
+                        <small>Error message</small>
+                    </div>
+                    <div class="input-box">
+                        <label>Senha:</label>
+                        <input type="password" name="senha" id="passwords">
+                        <i class="img-success"><img src="img/success-icon.svg" alt=""></i>
+                        <i class="img-error"><img src="img/error-icon.svg" alt=""></i>
+
+                        <small>Error message</small>
+                    </div>
+                    <legend>Endereço</legend>
+                    <div class="input-box">
+                        <label>CEP:</label>
+                        <input type="text" name="cep" id="cep" placeholder="XXXXX-XXX">
+                        <button class="busca" type="button">Buscar</button>
+                        <i class="img-success"><img src="img/success-icon.svg" alt=""></i>
+                        <i class="img-error"><img src="img/error-icon.svg" alt=""></i>
+
+                        <small>Error message</small>
+                    </div>
+                    <div class="input-box">
+                        <label>Rua:</label>
+                        <input type="text" name="rua" id="street">
+                        <i class="img-success"><img src="img/success-icon.svg" alt=""></i>
+                        <i class="img-error"><img src="img/error-icon.svg" alt=""></i>
+
+                        <small>Error message</small>
+                    </div>
+                    <div class="input-box">
+                        <label>Bairro:</label>
+                        <input type="text" name="bairro" id="district">
+                        <i class="img-success"><img src="img/success-icon.svg" alt=""></i>
+                        <i class="img-error"><img src="img/error-icon.svg" alt=""></i>
+
+                        <small>Error message</small>
+                    </div>
+                    <div class="input-box">
+                        <label>Cidade:</label>
+                        <input type="text" name="cidade" id="city">
+                        <i class="img-success"><img src="img/success-icon.svg" alt=""></i>
+                        <i class="img-error"><img src="img/error-icon.svg" alt=""></i>
+
+                        <small>Error message</small>
+                    </div>
+                    <div class="input-box">
+                        <label>Estado:</label>
+                        <input type="text" name="estado" id="state">
+                        <i class="img-success"><img src="img/success-icon.svg" alt=""></i>
+                        <i class="img-error"><img src="img/error-icon.svg" alt=""></i>
+
+                        <small>Error message</small>
+                    </div>
+                    <div class="input-box">
+                        <label>Número:</label>
+                        <input type="number" name="numero" id="number">
+                        <i class="img-success"><img src="img/success-icon.svg" alt=""></i>
+                        <i class="img-error"><img src="img/error-icon.svg" alt=""></i>
+
+                        <small>Error message</small>
+                    </div>
+                    <div class="botoes">
+                        <button id="btnEnviar" type="button">Enviar</button>
+                        <button type="reset">Excluir</button>
+                    </div>
+                </div>
+            </form>
+
+        </div>
+    </main>
+    <!-- /Cadastro -->
+
+    <!--Rodapé-->
+    <footer>
+        <div id="container_rodape">
+            <ul>
+                <li class="contato">
+                    <img src="img/endereco.png" alt="icone_endereco" class="icone">
+                    <span><strong>Farmácia Emeg -</strong> Av.Vicente Machado, 420 - Centro - Ponta Grossa/PR</span>
+                </li>
+                <li class="contato">
+                    <img src="img/email.png" alt="icone_email" class="icone">
+                    <a href="mailto: emeg.farmacia@gmail.com"><span><strong>E-mail:</strong>
+                            emeg.farmacia@gmail.com</span></a>
+                </li>
+            </ul>
+
+            <ul>
+                <li class="contato">
+                    <img src="img/telefone.png" alt="icone_telefone" class="icone"">
+                        <span><strong>Telefone:</strong> (42) 3993-5050</span>
+                    </li>
+                    <li class=" contato">
+                    <img src="img/whatsapp.png" alt="icone_whatsapp" class="icone">
+                    <span><strong>Whatsapp:</strong> (42) 93995-5050</span>
+                </li>
+            </ul>
+        </div>
+    </footer>
+    <!--/Rodapé-->
+
+    <script>
+        //carrinho
+        var texto_valor_carrinho = document.getElementById("quantidade_carrinho")
+        var valor_carrinho = JSON.parse(localStorage.getItem("carrinho_quantidade"))
+        texto_valor_carrinho.textContent = valor_carrinho
+
+        //login -> logado
+        var logado = document.getElementById("login")
+        var clientes = localStorage.getItem("clientes")
+        if(clientes){
+            clientes = JSON.parse(clientes)
+            for(let i = 0; i<clientes.length; i++){
+                if(clientes[i].login == true){
+                    logado.textContent = "Logado"
+                }
+            }
+        }
+
+        //localStorage.setItem('cadastroPessoa', 'abelha');
+
+        const btnEnviar = document.getElementById('btnEnviar');
+        let inputs = document.querySelectorAll('input');
+        const form = document.getElementById('form');
+        const nome = document.getElementById('name')
+        const cpf = document.getElementById('cpf');
+        const nasc = document.getElementById('nascimento')
+        const email = document.getElementById('email');
+        const senha = document.getElementById('passwords');
+        const cep = document.getElementById('cep');
+        const rua = document.getElementById('street');
+        const bairro = document.getElementById('district');
+        const cidade = document.getElementById('city');
+        const estado = document.getElementById('state');
+        const numero = document.getElementById('number');
+        let cont = 0;
+        //Cadastra usuário
+        btnEnviar.addEventListener("click", (e) => {
+            //Chama a função e passa o formulário como parâmetro e o evento de click no botão enviar
+            checkInputs("form", e);
+
+            //Atribui o local Storage para variável clientes
+            let clientes = JSON.parse(localStorage.getItem('clientes'));
+            //Se caso clientes for diferente criar um vetor de clientes
+            if (!clientes) {
+                clientes = [];
+            }
+
+            //Verifica se tem nome, e-mail e senha no local Storage
+            if (cont == 11) {
+                if (nome.value && email.value && senha.value) {
+                    const cliente = {
+                        login: false,
+                        nome: nome.value,
+                        email: email.value,
+                        senha: senha.value
+                    }
+                    clientes.push(cliente);
+                    localStorage.setItem('clientes', JSON.stringify(clientes));
+                    form.submit();
+                }
+            }
+
+        });
+
+        //Valida a cada click ou tab
+        inputs.forEach(element => {
+            element.addEventListener("blur", (event) => {
+                checkInputs(event.target.id);
+            });
+        });
+
+        //Formata a data com " / "
+        nasc.addEventListener("keypress", formataData);
+
+        //Fortmata o CEP com " - "
+        cep.addEventListener("keypress", formataCEP);
+
+        //Fortmata o CPF com " . " + " - "
+        cpf.addEventListener("keypress", formataCPF);
+
+
+        function checkInputs(id, e) {
+
+            cont = 0;
+            const userNameValue = nome.value;
+            const cpfValue = cpf.value;
+            const nascValue = nasc.value;
+            const emailValue = email.value;
+            const senhaValue = senha.value;
+            const cepValue = cep.value;
+            const ruaValue = rua.value;
+            const bairroValue = bairro.value;
+            const cidadeValue = cidade.value;
+            const estadoValue = estado.value;
+            const numeroValue = numero.value;
+
+
+            // Verificando nome
+            if (id == 'name' || id == 'form') {
+                if (userNameValue === "") {
+                    setErrorFor(nome, 'O nome é obrigatório!');
+                    cont --;
+                } else {
+                    setSuccessFor(nome);
+                    cont ++;
+                }
+            }
+
+            // Verificando CPF
+            if (id == 'cpf' || id == 'form') {
+                if (cpfValue === "") {
+                    setErrorFor(cpf, 'O CPF é obrigatório!');
+                    cont --;
+                } else if (!validarCPF(cpfValue)) {
+                    setErrorFor(cpf, 'CPF inválido!');
+                    cont --;
+                } else {
+                    setSuccessFor(cpf);
+                    cont ++;
+                }
+            }
+
+            // Verificando Data Nascimento
+            if (id == 'nascimento' || id == 'form') {
+                const dataAtual = new Date().getFullYear();
+                const anoNasc = nascValue.split('/');
+                const result = (dataAtual - anoNasc[2]) > 18 ? false : true;
+                if (nascValue === "") {
+                    setErrorFor(nasc, 'A data de nascimento é obrigatória!');
+                    cont --;
+                } else if (!checkNasc(nascValue)) {
+                    setErrorFor(nasc, 'A data deve ser dividida por "/" "Ex:dd/mm/yyyy"');
+                    cont --;
+                } else if (result) {
+                    setErrorFor(nasc, 'O usuário deve ser maior de 18 anos!');
+                    cont --;
+                } else {
+                    setSuccessFor(nasc);
+                    cont ++;
+                }
+            }
+
+            // Verificando e-mail
+            if (id == 'email' || id == 'form') {
+                if (emailValue === "") {
+                    setErrorFor(email, 'O e-mail é obrigatório!');
+                    cont --;
+                } else if (!checkEmail(emailValue)) {
+                    setErrorFor(email, 'Informe um e-mail válido!');
+                    cont --;
+                } else {
+                    setSuccessFor(email);
+                    cont ++;
+                }
+            }
+
+            // Verificando Senha
+            if (id == 'passwords' || id == 'form') {
+                if (senhaValue === "") {
+                    setErrorFor(senha, 'Senha é obrigatório!');
+                    cont --;
+                } else if (senhaValue.length < 8) {
+                    setErrorFor(senha, 'É nessário pelo menos 8 caracteres!');
+                    cont --;
+                } else {
+                    setSuccessFor(senha);
+                    cont ++;
+                }
+            }
+
+            // Consulta CEP
+            if (id == 'cep' || id == 'form') {
+                if (cepValue === "") {
+                    setErrorFor(cep, 'CEP é obrigatório!');
+                    cont --;
+                } else if (!checkCEP(cepValue)) {
+                    setErrorFor(cep, 'CEP inválido!');
+                    cont --;
+                } else {
+                    setSuccessFor(cep);
+                    cont ++;
+                }
+            }
+
+            // Valida Rua
+            if (id == 'street' || id == 'form') {
+                if (ruaValue === "") {
+                    setErrorFor(rua, 'Rua é obrigatório!');
+                    cont --;
+                } else {
+                    setSuccessFor(rua);
+                    cont ++;
+                }
+            }
+
+            // Valida Bairro
+            if (id == 'district' || id == 'form') {
+                if (bairroValue === "") {
+                    setErrorFor(bairro, 'Bairro é obrigatório!');
+                    cont --;
+                } else {
+                    setSuccessFor(bairro);
+                    cont ++;
+                }
+            }
+
+            // Valida Cidade
+            if (id == 'city' || id == 'form') {
+                if (cidadeValue === "") {
+                    setErrorFor(cidade, 'Cidade é obrigatório!');
+                    cont --;
+                } else {
+                    setSuccessFor(cidade);
+                    cont ++;
+                }
+            }
+
+            // Valida Estado
+            if (id == 'state' || id == 'form') {
+                if (estadoValue === "") {
+                    setErrorFor(estado, 'Estado é obrigatório!');
+                    cont --;
+                } else {
+                    setSuccessFor(estado);
+                    cont ++;
+                }
+            }
+
+            // Valida Número
+            if (id == 'number' || id == 'form') {
+                if (numeroValue === "") {
+                    setErrorFor(numero, 'Número é obrigatório!');
+                    cont --;
+                } else {
+                    setSuccessFor(numero);
+                    cont ++;
+                }
+            }
+
+        }
+
+        //Formata data
+        function formataData() {
+            if (nasc.value.length == 2) {
+                nasc.value += "/";
+            }
+            if (nasc.value.length == 5) {
+                nasc.value += "/";
+            }
+        }
+
+        //Formata CEP
+        function formataCEP() {
+            if (cep.value.length == 5) {
+                cep.value += "-";
+            }
+        }
+
+        //Formata CPF
+        function formataCPF() {
+            if (cpf.value.length == 3 || cpf.value.length == 7) {
+                cpf.value += ".";
+            }
+            if (cpf.value.length == 11) {
+                cpf.value += "-";
+            }
+
+        }
+
+        //Atribuir Erro
+        function setErrorFor(input, message) {
+            const formcontrol = input.parentElement;
+            const small = formcontrol.querySelector("small");
+            //Adiciona a menssagem de erro.
+            small.innerText = message;
+            //Adiciona a classe de erro.
+            formcontrol.className = 'input-box error';
+        }
+
+        //Atribuir Sucesso
+        function setSuccessFor(input) {
+            const formcontrol = input.parentElement;
+            //Adiciona a classe de sucesso.
+            formcontrol.className = 'input-box success';
+        }
+
+        //Verifica formato do CPF
+        function checkCpf(cpfValue) {
+
+            return /(\d{3})\.(\d{3})\.(\d{3})\-(\d{2})/g.test(cpfValue);
+        }
+        //Verifica formato da Data
+        function checkNasc(nascValue) {
+            return /^([0-2][0-9]|(3)[0-1])(\/)(((0)[0-9])|((1)[0-2]))(\/)\d{4}$/g.test(
+                nascValue);
+        }
+        //Verifica formato do E-mail
+        function checkEmail(emailValue) {
+            return /[a-z0-9]+@[a-z]+\.[a-z]{2,3}/g.test(
+                emailValue);
+        }
+        //Verifica formato do CEP
+        function checkCEP(cepValue) {
+            return /^[0-9]{5}-[0-9]{3}$/.test(cepValue);
+        }
+        //Valida o CPF
+        function validarCPF(cpfValue) {
+            // Chama a função para verificar se está do formato certo         
+            if (!checkCpf(cpfValue)) {
+                return false
+            } else {
+                let cpfTemp = cpfValue.replace(/\./g, "").replace("-", "");
+                console.log(cpfTemp);
+                // Elimina CPFs invalidos conhecidos	
+                if (cpfTemp.length != 11 ||
+                    cpfTemp == "00000000000" ||
+                    cpfTemp == "11111111111" ||
+                    cpfTemp == "22222222222" ||
+                    cpfTemp == "33333333333" ||
+                    cpfTemp == "44444444444" ||
+                    cpfTemp == "55555555555" ||
+                    cpfTemp == "66666666666" ||
+                    cpfTemp == "77777777777" ||
+                    cpfTemp == "88888888888" ||
+                    cpfTemp == "99999999999")
+                    return false;
+                // Valida 1o digito	
+                add = 0;
+                for (i = 0; i < 9; i++)
+                    add += parseInt(cpfTemp.charAt(i)) * (10 - i);
+                rev = 11 - (add % 11);
+                if (rev == 10 || rev == 11)
+                    rev = 0;
+                if (rev != parseInt(cpfTemp.charAt(9)))
+                    return false;
+                // Valida 2o digito	
+                add = 0;
+                for (i = 0; i < 10; i++)
+                    add += parseInt(cpfTemp.charAt(i)) * (11 - i);
+                rev = 11 - (add % 11);
+                if (rev == 10 || rev == 11)
+                    rev = 0;
+                if (rev != parseInt(cpfTemp.charAt(10)))
+                    return false;
+                return true;
+            }
+        }
+
+        //Motor de busca CEP
+        document.querySelector('.busca').addEventListener('click', function (evt) {
+            console.log(cep.value);
+            let url = 'https://viacep.com.br/ws/' + cep.value + '/json/';
+
+            let xhr = new XMLHttpRequest();
+
+            xhr.onload = function (evt) {
+
+                let selectStreet = document.querySelector('#street');
+                let selectDistrict = document.querySelector('#district');
+                let selectCity = document.querySelector('#city');
+                let selectState = document.querySelector('#state');
+
+                let jsonEndereco = JSON.parse(xhr.responseText);
+
+                if (jsonEndereco.erro) {
+                    selectStreet.value = '';
+                    selectStreet.disabled = false;
+
+                    selectDistrict.value = '';
+                    selectDistrict.disabled = false;
+
+                    selectCity.value = '';
+                    selectCity.disabled = false;
+
+                    selectState.value = '';
+                    selectState.disabled = false;
+                } else {
+                    selectStreet.value = jsonEndereco.logradouro;
+                    if (selectStreet.value == '') {
+                        selectStreet.disabled = false;
+                    }
+                    else {
+                        selectStreet.disabled = true;
+                    }
+                    selectDistrict.value = jsonEndereco.bairro;
+                    if (selectDistrict.value == '') {
+                        selectDistrict.disabled = false;
+                    }
+                    else {
+                        selectDistrict.disabled = true;
+                    }
+
+                    selectCity.value = jsonEndereco.localidade;
+                    if (selectCity.value == '') {
+                        selectCity.disabled = false;
+                    }
+                    else {
+                        selectCity.disabled = true;
+                    }
+                    selectState.value = jsonEndereco.uf;
+                    if (selectState.value == '') {
+                        selectState.disabled = true;
+                    }
+                    else {
+                        selectState.disabled = true;
+                    }
+                }
+            };
+
+            xhr.open("GET", url, true);
+            xhr.send();
+        });
+    </script>
+</body>
+
+</html>

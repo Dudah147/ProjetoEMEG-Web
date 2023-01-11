@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <title> Emeg Farmácia de Manipulação - A Sua Farmácia de Manipulação em Ponta Grossa </title>
+    <link rel="stylesheet" href="css/carrinho.css">
+</head>
+
+<body>
+    <!-- Cabeçalho -->
+    <header>
+        <picture>
+            <a href="Pagina_Inicial.html">
+            <source media="(max-width): 780px" src="img/logom.png" class="logo">
+            <source media="(max-width): 1024px" src="img/logo.png" class="logo">
+            <img src="img/logo.png" alt="logo" class="logo"></a>
+        </picture>
+        <nav>
+            <a href="Pagina_Inicial.html" class="pagina">Home</a>
+            <a href="Pagina_Produtos.html" class="pagina">Produtos</a>
+            <a href="contato.html" class="pagina">Contato</a>
+            <a href="formulariocadastro.html" class="pagina">Cadastro</a>
+            <a href="login.html" class="pagina" id="login">Login</a>
+            <a href="carrinho.html" class="pagina ultimo"><img src="img/carrinho_nav.png" id="img_carrinho_nav" alt="carrinho">
+            <span id="quantidade_carrinho"></span>
+            </a>
+            
+        </nav>
+    </header>
+    <!-- /Cabeçalho -->
+
+    <main>
+        <div id="vazio">
+            <h1 id="carrinho_vazio">Seu carrinho de compras está vazio!!</h1>
+            <img id="carrinho" src="img/carrinho-de-compras.png" alt="carrinho">
+        </div>
+        <section id="container">
+            <div id="container_produtos"></div>
+        </section>
+    </main>
+
+    <!--Rodapé-->
+    <footer>
+        <div id="container_rodape">
+            <ul>
+                <li class="contato">
+                    <img src="img/endereco.png" alt="icone_endereco" class="icone">
+                    <span><strong>Farmácia Emeg -</strong> Av.Vicente Machado, 420 - Centro - Ponta Grossa/PR</span>
+                </li>
+                <li class="contato">
+                    <img src="img/email.png" alt="icone_email" class="icone">
+                    <a href="mailto: emeg.farmacia@gmail.com"><span><strong>E-mail:</strong>
+                            emeg.farmacia@gmail.com</span></a>
+                </li>
+            </ul>
+
+            <ul>
+                <li class="contato">
+                    <img src="img/telefone.png" alt="icone_telefone" class="icone"">
+                            <span><strong>Telefone:</strong> (42) 3993-5050</span>
+                        </li>
+                        <li class=" contato">
+                    <img src="img/whatsapp.png" alt="icone_whatsapp" class="icone">
+                    <span><strong>Whatsapp:</strong> (42) 93995-5050</span>
+                </li>
+            </ul>
+        </div>
+    </footer>
+    <!--/Rodapé-->
+    <script type="text/javascript" src="js/carrinho.js"></script>
+</body>
+
+</html>

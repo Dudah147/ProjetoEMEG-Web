@@ -1,0 +1,213 @@
+<!DOCTYPE html>
+<html lang="pt_BR">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Login</title>
+    <link rel="stylesheet" href="css/login.css">
+</head>
+
+<body>
+    <!-- Cabeçalho -->
+    <header>
+        <picture>
+            <a href="Pagina_Inicial.html">
+            <source media="(max-width): 780px" src="img/logom.png" class="logo">
+            <source media="(max-width): 1024px" src="img/logo.png" class="logo">
+            <img src="img/logo.png" alt="logo" class="logo"></a>
+        </picture>
+        <nav>
+            <a href="Pagina_Inicial.html" class="pagina">Home</a>
+            <a href="Pagina_Produtos.html" class="pagina">Produtos</a>
+            <a href="contato.html" class="pagina">Contato</a>
+            <a href="formulariocadastro.html" class="pagina">Cadastro</a>
+            <a href="login.html" class="pagina" id="login">Login</a>
+            <a href="carrinho.html" class="pagina ultimo"><img src="img/carrinho_nav.png" id="img_carrinho_nav" alt="carrinho">
+            <span id="quantidade_carrinho"></span>
+            </a>
+            
+        </nav>
+    </header>
+    <br>
+    <!-- /Cabeçalho -->
+
+    <!-- Login -->
+    <main>
+        <div class="cadastro">
+            <form id="form" action="Pagina_Produtos.html">
+                <div class="topo">
+                    <h2>Login</h2>
+                </div>
+                <div class="input-group">
+                    <div class="input-box">
+                        <label>E-mail:</label>
+                        <input type="text" name="email" id="email">
+                        <i class="img-success"><img src="img/success-icon.svg" alt=""></i>
+                        <i class="img-error"><img src="img/error-icon.svg" alt=""></i>
+
+                        <small>Error message</small>
+                    </div>
+                    <div class="input-box">
+                        <label>Senha:</label>
+                        <input type="password" name="senha" id="senha">
+                        <i class="img-success"><img src="img/success-icon.svg" alt=""></i>
+                        <i class="img-error"><img src="img/error-icon.svg" alt=""></i>
+
+                        <small>Error message</small>
+                    </div>
+                    <div class="botoes">
+                        <button id="entrar" type="button">Entrar</button>
+                        <a href="formulariocadastro.html"><button id="cadastrar" type="button">Cadastrar-se</button></a>
+                    </div>
+                </div>
+            </form>
+        </div>
+        <!-- Sair -->
+        <div class="logado">
+            <h1 id="boas-vindas" style="text-align: center;">Olá,</h1>
+            <h3 style="text-align: center;">Você já está logado!</h3>
+            <button type="button" id="sair">Sair</button>
+        </div>
+    </main>
+    <!-- /Login-->
+
+    <!--Rodapé-->
+    <footer>
+        <div id="container_rodape">
+            <ul>
+                <li class="contato">
+                    <img src="img/endereco.png" alt="icone_endereco" class="icone">
+                    <span><strong>Farmácia Emeg -</strong> Av.Vicente Machado, 420 - Centro - Ponta Grossa/PR</span>
+                </li>
+                <li class="contato">
+                    <img src="img/email.png" alt="icone_email" class="icone">
+                    <a href="mailto: emeg.farmacia@gmail.com"><span><strong>E-mail:</strong>
+                            emeg.farmacia@gmail.com</span></a>
+                </li>
+            </ul>
+
+            <ul>
+                <li class="contato">
+                    <img src="img/telefone.png" alt="icone_telefone" class="icone"">
+                        <span><strong>Telefone:</strong> (42) 3993-5050</span>
+                    </li>
+                    <li class=" contato">
+                    <img src="img/whatsapp.png" alt="icone_whatsapp" class="icone">
+                    <span><strong>Whatsapp:</strong> (42) 93995-5050</span>
+                </li>
+            </ul>
+        </div>
+    </footer>
+    <!--/Rodapé-->
+    <script>
+        //carrinho
+        var texto_valor_carrinho = document.getElementById("quantidade_carrinho")
+        var valor_carrinho = JSON.parse(localStorage.getItem("carrinho_quantidade"))
+        texto_valor_carrinho.textContent = valor_carrinho
+
+        var logadoo = document.getElementById("login")
+        var clientess = localStorage.getItem("clientes")
+        if(clientess){
+            clientess = JSON.parse(clientess)
+            for(let i = 0; i<clientess.length; i++){
+                if(clientess[i].login == true){
+                    logadoo.textContent = "Logado"
+                }
+            }
+        }
+
+        const entrar = document.getElementById('entrar');
+        const principal = document.querySelector('.cadastro');
+        const alternado = document.querySelector('.logado');
+        let clientes = JSON.parse(localStorage.getItem("clientes"));
+        const form = document.getElementById('form');
+        const email = document.getElementById('email');
+        const senha = document.getElementById('senha');
+        let certo = false;
+
+        entrar.addEventListener('click', e => {
+            fazerLogin(e);
+            if (certo == true) {
+                form.submit();
+            }
+        });
+
+        //Procurando cliente.login==true para trocar o html e colocar o nome do cliente que está logado
+        for (cliente of clientes) {
+            if (cliente.login == true) {
+                document.getElementById('boas-vindas').innerHTML += " " + cliente.nome;
+                principal.style.display = 'none';
+                alternado.style.display = 'block';
+                break;
+            } else {
+                principal.style.display = 'block';
+                alternado.style.display = 'none';
+            }
+        }
+
+        //Ao pressionar botão sair atribui todos os cliente.login como false
+        document.getElementById('sair').addEventListener('click', evt => {
+            for (cliente of clientes) {
+                cliente.login = false;
+                localStorage.setItem('clientes', JSON.stringify(clientes));
+                location.reload();
+            }
+        });
+
+
+        function fazerLogin(evento) {
+            if (clientes != null) {
+                const emailValue = email.value;
+                const senhaValue = senha.value;
+
+                //Aqui dá tanto para usar clientes.forEach() como for (cliente of clientes), eu prefiro o for normal
+                for (cliente of clientes) {
+                    //Criando as varáveis do Storage todas vazias para não ter erro
+                    let clienteStorage = '';
+                    let emailStorage = '';
+                    let senhaStorage = '';
+                    //Atribuindo valor para elas
+                    clienteStorage = cliente.nome;
+                    emailStorage = cliente.email;
+                    senhaStorage = cliente.senha;
+                    //Se email e senha for igual do cliente que está armazenado...Entra
+                    //Se não da ERRO
+                    if (emailValue == emailStorage && senhaValue == senhaStorage) {
+                        cliente.login = true;
+                        setSuccessFor(email);
+                        setSuccessFor(senha);
+                        certo = true;
+                        localStorage.setItem('clientes', JSON.stringify(clientes));
+                        break;
+                    } else {
+                        setErrorFor(email, "E-mail e/ou senha inválidos!");
+                        setErrorFor(senha, "Senha ou/e e-mail inválidos!");
+                    }
+                }
+            } else {
+                evento.preventDefault();
+                setErrorFor(email, "E-mail e/ou senha inválidos!");
+                setErrorFor(senha, "Senha e/ou e-mail inválidos!");
+            }
+        }
+
+        //Atribuir erro
+        function setErrorFor(input, message) {
+            const formcontrol = input.parentElement;
+            const small = formcontrol.querySelector("small");
+            //Adiciona a menssagem de erro.
+            small.innerText = message;
+            //Adiciona a classe de erro.
+            formcontrol.className = 'input-box error';
+        }
+
+        //Atribuir Sucesso
+        function setSuccessFor(input) {
+            const formcontrol = input.parentElement;
+            //Adiciona a classe de sucesso.
+            formcontrol.className = 'input-box success';
+        }
+    </script>
+</body>
+
+</html>

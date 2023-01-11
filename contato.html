@@ -1,0 +1,217 @@
+<!DOCTYPE html>
+<html lang="pt_BR">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Contato</title>
+    <link rel="stylesheet" href="css/contato.css">
+</head>
+
+<body>
+    <!-- Cabeçalho -->
+    <header>
+        <picture>
+            <a href="Pagina_Inicial.html">
+            <source media="(max-width): 780px" src="img/logom.png" class="logo">
+            <source media="(max-width): 1024px" src="img/logo.png" class="logo">
+            <img src="img/logo.png" alt="logo" class="logo"></a>
+        </picture>
+        <nav>
+            <a href="Pagina_Inicial.html" class="pagina">Home</a>
+            <a href="Pagina_Produtos.html" class="pagina">Produtos</a>
+            <a href="contato.html" class="pagina">Contato</a>
+            <a href="formulariocadastro.html" class="pagina">Cadastro</a>
+            <a href="login.html" class="pagina" id="login">Login</a>
+            <a href="carrinho.html" class="pagina ultimo"><img src="img/carrinho_nav.png" id="img_carrinho_nav" alt="carrinho">
+            <span id="quantidade_carrinho"></span>
+            </a>
+            
+        </nav>
+    </header>
+    <br>
+    <!-- /Cabeçalho -->
+
+    <!-- Contato -->
+    <main>
+        <div class="contato-pagina">
+            <form id="form">
+                <div class="topo">
+                    <h2>Contato</h2>
+                </div>
+                <div class="input-group">
+                    <div class="input-box">
+                        <label>Nome:</label>
+                        <input class="name" type="text" name="nome" placeholder="Nome">
+                        <i class="img-success"><img src="img/success-icon.svg" alt=""></i>
+                        <i class="img-error"><img src="img/error-icon.svg" alt=""></i>
+
+                        <small>Error message</small>
+                    </div>
+                    <div class="input-box">
+                        <label>E-mail:</label>
+                        <input id="email" type="text" name="email" placeholder="exemplo@email.com">
+                        <i class="img-success"><img src="img/success-icon.svg" alt=""></i>
+                        <i class="img-error"><img src="img/error-icon.svg" alt=""></i>
+
+                        <small>Error message</small>
+                    </div>
+                    <div class="input-box">
+                        <label>Assunto:</label>
+                        <select id="opcao" name="assunto">
+                            <option value="padrao">Selecionar</option>
+                            <option value="sugestão">Sugestão</option>
+                            <option value="reclamação">Reclamação</option>
+                            <option value="elogios">Elogios</option>
+                        </select>
+                        <i class="img-success"><img src="img/success-icon.svg" alt=""></i>
+                        <i class="img-error"><img src="img/error-icon.svg" alt=""></i>
+
+                        <small class="utlimo">Error message</small>
+                    </div>
+                    <div class="input-box">
+                        <label>Mensagem:</label>
+                        <textarea id="texto" cols="30" rows="10" name="mensagem"></textarea>
+                        <i class="img-success"><img src="img/success-icon.svg" alt=""></i>
+                        <i class="img-error"><img src="img/error-icon.svg" alt=""></i>
+
+                        <small class="utlimo">Error message</small>
+                    </div>
+                </div>
+                <div>
+                    <button class="btnEnviar" type="submit">Enviar</button>
+                </div>
+            </form>
+        </div>
+    </main>
+    <!-- /Contato -->
+
+    <!--Rodapé-->
+    <footer>
+        <div id="container_rodape">
+            <ul>
+                <li class="contato">
+                    <img src="img/endereco.png" alt="icone_endereco" class="icone">
+                    <span><strong>Farmácia Emeg -</strong> Av.Vicente Machado, 420 - Centro - Ponta Grossa/PR</span>
+                </li>
+                <li class="contato">
+                    <img src="img/email.png" alt="icone_email" class="icone">
+                    <a href="mailto: emeg.farmacia@gmail.com"><span><strong>E-mail:</strong>
+                            emeg.farmacia@gmail.com</span></a>
+                </li>
+            </ul>
+
+            <ul>
+                <li class="contato">
+                    <img src="img/telefone.png" alt="icone_telefone" class="icone"">
+                    <span><strong>Telefone:</strong> (42) 3993-5050</span>
+                </li>
+                <li class=" contato">
+                    <img src="img/whatsapp.png" alt="icone_whatsapp" class="icone">
+                    <span><strong>Whatsapp:</strong> (42) 93995-5050</span>
+                </li>
+            </ul>
+        </div>
+    </footer>
+    <!--/Rodapé-->
+    <script>
+
+        const form = document.getElementById('form');
+        const nome = document.querySelector('.name');
+        const email = document.querySelector('#email');
+        const opcao = document.getElementById('opcao');
+        const mensagem = document.getElementById('texto');
+
+        //carrinho
+        var texto_valor_carrinho = document.getElementById("quantidade_carrinho")
+        var valor_carrinho = JSON.parse(localStorage.getItem("carrinho_quantidade"))
+        texto_valor_carrinho.textContent = valor_carrinho
+
+        //login -> logado
+        var logado = document.getElementById("login")
+        var clientes = localStorage.getItem("clientes")
+        if(clientes){
+            clientes = JSON.parse(clientes)
+            for(let i = 0; i<clientes.length; i++){
+                if(clientes[i].login == true){
+                    logado.textContent = "Logado"
+                }
+            }
+        }
+
+        console.log(opcao.value);
+
+        form.addEventListener('submit', (e) => {
+            valida(e);
+        });
+
+        function valida(evt) {
+
+            const nomeValue = nome.value;
+            const emailValue = email.value;
+            const opcaoValue = opcao.value;
+            const mensagemValue = mensagem.value;
+
+            console.log(nomeValue);
+
+            if (!nomeValue) {
+                evt.preventDefault();
+                setErrorFor(nome, 'Nome é obrigatório!');
+            } else {
+                setSuccessFor(nome);
+            }
+
+            if (!emailValue) {
+                evt.preventDefault();
+                setErrorFor(email, 'E-mail é obrigatório!');
+            } 
+            else if(!checkEmail(emailValue)){
+                evt.preventDefault();
+                setErrorFor(email, 'E-mail inválido!');
+            }
+            else {
+                setSuccessFor(email);
+            }
+
+            if (opcaoValue == "padrao"){
+                evt.preventDefault();
+                setErrorFor(opcao, 'Assunto é obrigatório!');
+            }else {
+                setSuccessFor(opcao);
+            }
+
+            if (!mensagemValue) {
+                evt.preventDefault();
+                setErrorFor(mensagem, 'Mensagem é obrigatório!');
+            } else {
+                setSuccessFor(mensagem);
+            }
+
+            function checkEmail(emailValue){
+                return /[a-z0-9]+@[a-z]+\.[a-z]{2,3}/g.test(
+                emailValue);
+            }
+        }
+
+        
+
+
+        //Atribuir erro
+        function setErrorFor(input, message) {
+            const formcontrol = input.parentElement;
+            const small = formcontrol.querySelector("small");
+            //Adiciona a menssagem de erro.
+            small.innerText = message;
+            //Adiciona a classe de erro.
+            formcontrol.className = 'input-box error';
+        }
+
+        //Atribuir Sucesso
+        function setSuccessFor(input) {
+            const formcontrol = input.parentElement;
+            //Adiciona a classe de sucesso.
+            formcontrol.className = 'input-box success';
+        }
+    </script>
+</body>
+
+</html>

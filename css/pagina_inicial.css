@@ -1,0 +1,362 @@
+* {
+    box-sizing: border-box;
+    font-family: 'Trebuchet MS';
+}
+body {
+    background: #fff;
+    font-size: 16px;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+/* cabeçalho */
+
+header{
+    background-color: rgb(2, 75, 2);
+    padding-bottom: .5rem;
+}
+.logo{
+    position: relative;
+    left: 2rem;
+    top: .5rem;
+}
+nav{
+    margin-top: 2.5rem;
+    font-size: 1.3rem;
+    float: right;
+    position: relative;
+    right: 2rem;
+    width: auto;
+}
+a:hover {
+    color: black;
+}
+.pagina {
+    display: inline;
+    margin-right: 1rem;
+    color: white;
+    border-radius: 8px;
+}
+.pagina:link {
+    text-decoration: none;
+}
+.ultimo{
+    margin-right: 0;
+}
+
+#img_carrinho_nav {
+    display: inline;
+    width: 1.5rem;
+    margin-top: auto;
+    margin-bottom: auto;
+}
+
+#quantidade_carrinho {
+    display: inline;
+    color: white;
+    font-size: 1.2rem;
+    margin-top: auto;
+    margin-bottom: auto;
+}
+
+/* FIM cabeçalho */
+
+/* Main */
+#banner {
+    margin-top: 2rem;
+    width: 98%;
+    height: 25rem;
+    border-radius: 15px;
+    margin-left: auto;
+    margin-right: auto;
+    display: block;
+}
+
+
+#banner0{
+    background-color: black;
+}
+.numbanner{
+    border-radius: 50px;
+    width: 2rem;
+    height: 2rem;
+    text-align: center;
+    margin-right: 3rem;
+    font-size: 0;
+    cursor: pointer;
+    background-color: rgb(189, 188, 188);
+}
+.numbanner:last-child{
+    margin-right: 0;
+}
+#selectbanner{
+    margin-top: .8rem;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+#tituloprod {
+    font-size: 2rem;
+    font-family: Arial, Helvetica, sans-serif;
+}
+#tituloprod::after {
+    content: "";
+    background: linear-gradient(260deg, rgba(215, 0, 14, 0) 0%, rgba(33, 83, 5, 0.6) 51.56%, #104902 84.37%);
+    height: 2px;
+    width: 220px;
+    display: block;
+    margin-top: 9px;
+}
+/* Produtos */
+#container_produtos {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+}
+#produtos {
+    display: flex;
+    align-items: center;
+    flex-direction: row;
+    width: 100%;
+    padding-bottom: 2rem;
+    justify-content: space-around;
+}
+.produto {
+    margin-left: 1rem;
+    margin-right: 1rem;
+    padding: .8rem;
+    display: inline-block;
+    border-radius: 10px;
+    box-shadow: 0px 5px 9px rgb(161, 161, 161);
+    width: 25%;
+}
+.imgprod {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    width: 8rem;
+    height: 12rem;
+}
+.nomeprod {
+    margin-top: .5rem;
+    margin-bottom: .3rem;
+}
+span {
+    display: block;
+}
+.preco {
+    font-size: 1.3rem;
+}
+.precoanterior {
+    margin-bottom: .2rem;
+    font-size: .8rem;
+}
+.verprod {
+    margin-top: .8rem;
+    margin-left: auto;
+    margin-right: auto;
+    text-align: center;
+    display: block;
+    width: 6.5rem;
+    border: 1px solid black;
+    border-radius: 4px;
+    padding: .4rem;
+    background-color: #104902;
+    color: white;
+}
+.verprod:link {
+    text-decoration: none;
+}
+/* FIM Produtos */
+/* FIM Main */
+/* Rodapé */
+#container_rodape {
+    display: flex;
+    justify-content: left;
+    padding-top: .5rem;
+    padding-bottom: .5rem;
+}
+footer {
+    background-color: rgb(2, 75, 2);
+    margin-top: 2rem;
+    color: white;
+}
+.icone {
+    width: 35px;
+    padding: 10px 10px 10px 0;
+}
+.contato {
+    display: flex;
+    align-items: center;
+    color: white;
+}
+.contato:link {
+    text-decoration: none;
+}
+li a {
+    text-decoration: none;
+    color: white;
+}
+ul:first {
+    width: 70%;
+    text-align: left;
+}
+ul {
+    margin: 0;
+}
+/* FIM Rodapé */
+@media screen and (max-width: 950px) {
+    .pagina {
+        margin-right: 2rem;
+    }
+    .logo {
+        left: 0;
+        display: block;
+        margin-left: auto;
+        margin-right: auto;
+    }
+    nav {
+        right: 0;
+        float: none;
+        margin-top: 1rem;
+        text-align: center;
+        padding-right: 0;
+    }
+    /* Main */
+    #banner {
+        height: 20rem;
+    }
+    /* FIM Main */
+}
+@media screen and (max-width: 768px) {
+    .pagina {
+        margin-right: 2rem;
+    }
+    .logo {
+        left: 0;
+        display: block;
+        margin-left: auto;
+        margin-right: auto;
+    }
+    nav {
+        right: 0;
+        float: none;
+        margin-top: 1rem;
+        text-align: center;
+        padding-right: 0;
+    }
+    /* Main */
+    #banner {
+        height: 20rem;
+    }
+    #produtos {
+        flex-direction: column;
+    }
+    .produto {
+        width: 80%;
+        margin-bottom: 1.5rem;
+    }
+    .infoprod {
+        text-align: center;
+    }
+    /* FIM Main */
+    /* Rodape */
+    .contato {
+        font-size: .9rem;
+    }
+    ul {
+        padding-left: 1rem;
+    }
+    /* FIM Rodape */
+}
+@media screen and (max-width: 660px) {
+    nav {
+        padding-bottom: .5rem;
+        margin-top: 1rem;
+        padding-right: 1rem;
+    }
+    .pagina {
+        margin-left: auto;
+        margin-right: auto;
+        margin-bottom: 1rem;
+        display: block;
+        width: 50%;
+    }
+    .pagina:last-child {
+        margin-bottom: 0rem;
+    }
+    /* Main */
+    /* FIM Main */
+    #container_rodape {
+        display: block;
+    }
+    ul {
+        padding-bottom: 0;
+        padding-top: 0;
+        width: auto;
+        padding-left: .8rem;
+    }
+    .contato {
+        justify-content: center;
+    }
+    /* Footer */
+}
+@media screen and (max-width: 320px) {
+    .logo {
+        left: 0;
+    }
+    nav {
+        margin-top: 0.5rem;
+        float: none;
+        right: 0;
+        padding-right: 1rem;
+    }
+    .pagina {
+        margin-left: 0;
+        margin-right: 0;
+        display: block;
+        width: 100%;
+    }
+    /* Main */
+    #banner {
+        height: 20rem;
+        border-radius: 0;
+        margin-left: 0;
+        margin-right: 0;
+        width: 100%;
+    }
+    #tituloprod {
+        font-size: 1.5rem;
+        text-align: center;
+    }
+    .imgprod {
+        width: 5rem;
+        height: 7rem;
+    }
+    .nomeprod {
+        font-size: 1rem;
+    }
+    .preco {
+        font-size: 1rem;
+    }
+    /* FIM Main */
+    /* Footer */
+    footer {
+        display: block;
+    }
+    ul {
+        padding-bottom: 0;
+        padding-top: 0;
+        width: auto;
+        padding-left: .3rem;
+    }
+    .contato {
+        justify-content: left;
+    }
+    #container_rodape {
+        font-size: .8rem;
+        padding-top: 1rem;
+        padding-bottom: 1rem;
+    }
+    /* FIM Footer */
+}

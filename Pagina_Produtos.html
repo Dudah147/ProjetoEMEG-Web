@@ -1,0 +1,307 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+   <meta charset="utf-8">
+   <title> Emeg Farmácia de Manipulação - Produtos</title>
+   <link rel="stylesheet" href="css/produtos.css">
+</head>
+
+<body>
+   <!-- Layout -->
+   <header>
+        <picture>
+            <a href="Pagina_Inicial.html">
+            <source media="(max-width): 780px" src="img/logom.png" class="logo">
+            <source media="(max-width): 1024px" src="img/logo.png" class="logo">
+            <img src="img/logo.png" alt="logo" class="logo"></a>
+        </picture>
+        <nav>
+            <a href="Pagina_Inicial.html" class="pagina">Home</a>
+            <a href="Pagina_Produtos.html" class="pagina">Produtos</a>
+            <a href="contato.html" class="pagina">Contato</a>
+            <a href="formulariocadastro.html" class="pagina">Cadastro</a>
+            <a href="login.html" class="pagina" id="login">Login</a>
+            <a href="carrinho.html" class="pagina ultimo"><img src="img/carrinho_nav.png" id="img_carrinho_nav" alt="carrinho">
+            <span id="quantidade_carrinho"></span>
+            </a>
+        </nav>
+    </header>
+   <!-- /Layout -->
+
+   <!-- Produtos -->
+   <main>
+
+    <section id="conteiner_produtos">
+        <div id="botoes">
+            <div id="ordemnome">
+                <span>Ordernar por NOME:</span>
+                <i id="ordem1" class="mudacor"><img src="img/nomeasc.png" class="ordemimg"></i>
+                <i id="ordem2" class="mudacor"><img src="img/nomedesc.png" class="ordemimg"></i>
+            </div>
+            <div id="ordempreco">
+                <span>Ordenar por PRECO:</span>
+                <i id="ordem3" class="mudacor"><img src="img/precoasc.png" class="ordemimg"></i>
+                <i id="ordem4" class="mudacor"><img src="img/precodesc.png" class="ordemimg"></i>
+            </div>
+        </div>
+       <section id="produtos">
+          <div class="produto">
+             <img src="img/VinagreMaca.jpg" alt="Vinagre de Maçã Emeg" class="imgprod">
+             <div class="infoprod">
+                <h3 class="nomeprod">Vinagre de Maçã Emeg</h3>
+                <span class="precoanterior"><del>R$ 9,90</del></span>
+                <span class="preco">R$ 6,69</span>
+                <a class="verprod">Comprar</a>
+             </div>
+             <div class="modal">
+                 <strong>Descricao: </strong>
+                  <p>A Emeg também tem o mais puro Vinagre de Maçã.
+                  Produzido a partir de maçãs cultivadas na fazenda da Emeg em Palmas/PR de maneira orgânica,
+                  sem o uso de agrotóxicos, colhidas na época certa e com o selo de qualidade Emeg.
+                  Experimente o melhor vinagre de maçã do Brasil</p>
+                  <a class="ocultar">Ocultar Informações</a>
+             </div>
+          </div>
+
+          <div class="produto">
+             <img src="img/RaiserDead5000m.jpg" alt="Raiser Dead 5000 Melhorador da Libido" class="imgprod">
+             <div class="infoprod">
+                <h3 class="nomeprod">Raiser Dead 5000</h3>
+                <span class="precoanterior"><del>R$ 190,00</del></span>
+                <span class="preco">R$ 159,99</span>
+                <a class="verprod">Comprar</a>
+             </div>
+             <div class="modal">
+                 <strong>Descricao: </strong>
+                  <p>O Melhorador da Libido que levanta até defunto, com a garantia de qualidade da Emeg.
+                  Testado e aprovado por 100% dos broxas!!!
+                  Combina a ação natural da Ioimbina, do Ginseng e da Maca Peruana.
+                  Agora em embalagem com 90 cápsulas, garantindo um mês de potência total!!!</p>
+                  <a class="ocultar">Ocultar Informações</a>
+             </div>
+          </div>
+
+          <div class="produto">
+             <img src="img/PauProlism.jpg" alt="PauPrólis Solução de Canela em Pau e Própolis" class="imgprod">
+             <div class="infoprod">
+                <h3 class="nomeprod">PauPrólis</h3>
+                <span class="precoanterior"><del>R$ 11,50</del></span>
+                <span class="preco">R$ 9,39</span>
+                <a class="verprod">Comprar</a>
+             </div>
+             <div class="modal">
+                 <strong>Descricao: </strong>
+                  <p>Com o frio se aproximando, também se inicia a estação das infecções de garganta.
+                  A Emeg combinou a conhecida ação anti-inflamatória e anti-séptica do própolis de abelhas africanizadas,
+                  com a canela chinesa em pau para auxiliar você no combate as infecções de garganta.
+                  Aplique o PauPrólis na boca quatro vez ao dia e sinta a força dessa combinação!!!</p>
+                  <a class="ocultar">Ocultar Informações</a>
+             </div>
+          </div>
+
+          <div class="produto">
+             <img src="img/ProtivBora.jpg" alt="Protiv Bora Colágeno Hidrolisado" class="imgprod">
+             <div class="infoprod">
+                <h3 class="nomeprod">Protiv Bora</h3>
+                <span class="precoanterior"><del>R$ 175,00</del></span>
+                <span class="preco">R$ 129,90</span>
+                <a class="verprod">Comprar</a>
+             </div>
+             <div class="modal">
+                 <strong>Descricao: </strong>
+                  <p>A Emeg traz da Croácia o melhor colágeno do mundo.
+                  Para retardar os efeitos do envelhecimento na pele e nas articulações,
+                  use duas cápsulas por dia do colágeno hidrolisado Protiv Bora e garanta uma pele de pêssego.
+                  Protiv Bora, o inimigo número 1 dos esteticistas.</p>
+                  <a class="ocultar">Ocultar Informações</a>
+             </div>
+          </div>
+
+          <div class="produto">
+             <img src="img/SweetDreamerm.jpg" alt="Sweet Dremer Pediátrico" class="imgprod">
+             <div class="infoprod">
+                <h3 class="nomeprod">Sweet Dremer Pediátrico</h3>
+                <span class="precoanterior"><del>R$ 32,00</del></span>
+                <span class="preco">R$ 29,99</span>
+                <a class="verprod">Comprar</a>
+             </div>
+             <div class="modal">
+                 <strong>Descricao: </strong>
+                  <p>O Sweet Dremer que você já conhece, agora na versão pediátrica.
+                  Às vezes não é o adulto que tem problemas para dormir, são as crianças é quem atrapalham o descanso dos pais.
+                  Pensando nisso, a Emeg oferece agora do Sweet Dremer Pediátrico que garante um soninho de pedra para as crianças.
+                  Pais, deixem as crianças sonharem!!!</p>
+                  <a class="ocultar">Ocultar Informações</a>
+             </div>
+          </div>
+
+          <div class="produto">
+             <img src="img/Baboseira.jpg" alt="Loção de Babosa - Baboseira" class="imgprod">
+             <div class="infoprod">
+                <h3 class="nomeprod">Loção de Babosa Baboseira</h3>
+                <span class="precoanterior"><del>R$ 28,00</del></span>
+                <span class="preco">R$ 22,99</span>
+                <a class="verprod">Comprar</a>
+             </div>
+             <div class="modal">
+                 <strong>Descricao: </strong>
+                  <p>Quem mandou não ficar de baboseira?
+                  A loção de babosa Baboseira da Emeg é feita com o sumo mais puro da babosa.
+                  A babosa tem ação anti-inflamatória e cicatrizante, ajuda nas dores musculares,
+                  enxaqueca, artrite, além da conhecida ação na pele e nos cabelos.
+                  Agora todo mundo vai querer ficar de Baboseira!!!</p>
+                  <a class="ocultar">Ocultar Informações</a>
+             </div>
+          </div>
+
+          <div class="produto">
+             <img src="img/MagicGoldenShower.jpg" alt="Magic Golden Shower Coloridor de Urina" class="imgprod">
+             <div class="infoprod">
+                <h3 class="nomeprod">Magic Golden Shower</h3>
+                <span class="precoanterior"><del>R$ 54,00</del></span>
+                <span class="preco">R$ 39,99</span>
+                <a class="verprod">Comprar</a>
+             </div>
+             <div class="modal">
+                 <strong>Descricao: </strong>
+                  <p>O Seu Golden Shower agora vai ficar mais colorido...E Protegido.
+                  A Fenazopiridina deixa a urina com um colorido sem igual, além de servir como anti-séptico urinário.
+                  Agora até o Bolsonaro vai poder saber o que é um Golden Shower Especial!!!
+                  Com as cores e a qualidade da Emeg.</p>
+                  <a class="ocultar">Ocultar Informações</a>
+             </div>
+          </div>
+
+          <div class="produto">
+             <img src="img/OsteoRegenereXm.jpg" alt="OsteoRegenereX tratamento para Osteoporose" class="imgprod">
+             <div class="infoprod">
+                <h3 class="nomeprod">OsteoRegenereX</h3>
+                <span class="precoanterior"><del>R$ 166,00</del></span>
+                <span class="preco">R$ 134,49</span>
+                <a class="verprod">Comprar</a>
+             </div>
+             <div class="modal">
+                 <strong>Descricao: </strong>
+                  <p>A Emeg também tem a solução para a Osteoporose.
+                  A formulação de OsteoRegenereX reune os minerais em sua forma mais pura da natureza,
+                  Com o Alendronato Dissódico para o tratamento e a prevenção da Osteoporose.</p>
+                  <a class="ocultar">Ocultar Informações</a>
+             </div>
+          </div>
+
+          <div class="produto">
+             <img src="img/FatRedDestroyerm.jpg" alt="Fat's Red Destroyer Emagrecedor" class="imgprod">
+             <div class="infoprod">
+                <h3 class="nomeprod">Fat's Red Destroyer</h3>
+                <span class="precoanterior"><del>R$ 220,00</del></span>
+                <span class="preco">R$ 179,99</span>
+                <a class="verprod">Comprar</a>
+             </div>
+             <div class="modal">
+                 <strong>Descricao: </strong>
+                  <p>A sua gordura está com os dias contados!!!
+                  A Emeg apresenta sua principal arma contra a Obesidade.
+                  A Fórmula única do Fat's Red Destroyer reúne componentes que vão acabar com a sua gordura e com você.
+                  Afinal de contas...o que não nos mata, nos faz mais gordo. E nós não queremos te deixar mais gordo.</p>
+                  <a class="ocultar">Ocultar Informações</a>
+             </div>
+          </div>
+
+          <div class="produto">
+             <img src="img/RejuveneX.jpg" alt="Kit Rejuvenescedor RejuveneX" class="imgprod">
+             <div class="infoprod">
+                <h3 class="nomeprod">RejuveneX</h3>
+                <span class="precoanterior"><del>R$ 309,00</del></span>
+                <span class="preco">R$ 249,99</span>
+                <a class="verprod">Comprar</a>
+             </div>
+             <div class="modal">
+                 <strong>Descricao: </strong>
+                  <p>Para voltar no tempo você não precisa de uma máquina do tempo...
+                  Você precisa do novo RejuveneX da Emeg Manipulados.
+                  O Kit vai com uma formulação especial para tomar pela manhã, a tarde e a noite.
+                  Volte no tempo com RejuveneX!!!</p>
+                  <a class="ocultar">Ocultar Informações</a>
+             </div>
+          </div>
+
+          <div class="produto">
+             <img src="img/Cocoliudom.jpg" alt="Óleo de Coco Cocoliudo" class="imgprod">
+             <div class="infoprod">
+                <h3 class="nomeprod">Cocoliudo</h3>
+                <span class="precoanterior"><del>R$ 19,00</del></span>
+                <span class="preco">R$ 13,99</span>
+                <a class="verprod">Comprar</a>
+             </div>
+             <div class="modal">
+                 <strong>Descricao: </strong>
+                  <p>Quer ficar na moda usando Gordura de Coco?
+                  A Emeg apresenta o óleo de coco filtrado três vezes.
+                  Apesar de não existirem benefícios comprovados, fique na moda usando esse puríssimo óleo de Coco.</p>
+                  <a class="ocultar">Ocultar Informações</a>
+             </div>
+          </div>
+
+          <div class="produto">
+             <img src="img/PureAirrrm.jpg" alt="Pure Airrr Desorizador de Ambientes" class="imgprod">
+             <div class="infoprod">
+                <h3 class="nomeprod">Pure Airrr</h3>
+                <span class="precoanterior"><del>R$ 16,70</del></span>
+                <span class="preco">R$ 14,55</span>
+                <a class="verprod">Comprar</a>
+             </div>
+             <div class="modal">
+                 <strong>Descricao: </strong>
+                  <p>Quer acabar com o cheiro ruim e ainda deixar sua casa com cheiro da brisa do mar?
+                  Use o desodorizador de ambientes Pure Airrr da Emeg. Com compostos naturais que vão neutralizar
+                  as partículas de cheiro ruim do ambiente e ainda vão deixar um perfume de brisa do mar na sua casa.
+                  Use no banheiro, na sala após fumar, na cozinha após fritar peixe, e receba suas visitas com a brisa do mar no ar!!!</p>
+                  <a class="ocultar">Ocultar Informações</a>
+             </div>
+          </div>
+       </section>
+    </section>
+   </main>
+   <!-- /Produtos -->
+
+   <!--Rodapé-->
+   <footer>
+      <div id="container_rodape">
+         <ul>
+            <li class="contato">
+               <img src="img/endereco.png" alt="icone_endereco" class="icone">
+               <span><strong>Farmácia Emeg -</strong> Av.Vicente Machado, 420 - Centro - Ponta Grossa/PR</span>
+            </li>
+            <li class="contato">
+               <img src="img/email.png" alt="icone_email" class="icone">
+               <a href="mailto: emeg.farmacia@gmail.com"><span><strong>E-mail:</strong>
+                     emeg.farmacia@gmail.com</span></a>
+            </li>
+         </ul>
+
+         <ul>
+            <li class="contato">
+               <img src="img/telefone.png" alt="icone_telefone" class="icone"">
+                  <span><strong>Telefone:</strong> (42) 3993-5050</span>
+              </li>
+              <li class=" contato">
+               <img src="img/whatsapp.png" alt="icone_whatsapp" class="icone">
+               <span><strong>Whatsapp:</strong> (42) 93995-5050</span>
+            </li>
+         </ul>
+      </div>
+   </footer>
+   <!--/Rodapé-->
+   <script type="text/javascript" src="js/produtos.js"></script>
+</body>
+
+</html>
+
+
+<!--
+Página de produtos (Mínimo: 12 produtos) (Valor: 3,0)
+Nome
+Imagem
+Valor
+-->

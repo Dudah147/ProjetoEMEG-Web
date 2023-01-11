@@ -1,0 +1,328 @@
+* {
+    box-sizing: border-box;
+    font-family: 'Trebuchet MS';
+}
+body {
+    background: #fff;
+    font-size: 16px;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+/* cabeçalho */
+
+header{
+    background-color: rgb(2, 75, 2);
+    padding-bottom: .5rem;
+}
+.logo{
+    position: relative;
+    left: 2rem;
+    top: .5rem;
+}
+nav{
+    margin-top: 2.5rem;
+    font-size: 1.3rem;
+    float: right;
+    position: relative;
+    right: 2rem;
+    width: auto;
+}
+a:hover {
+    color: black;
+}
+.pagina {
+    display: inline;
+    margin-right: 1rem;
+    color: white;
+    border-radius: 8px;
+}
+.pagina:link {
+    text-decoration: none;
+}
+.ultimo{
+    margin-right: 0;
+}
+
+#img_carrinho_nav {
+    display: inline;
+    width: 1.5rem;
+    margin-top: auto;
+    margin-bottom: auto;
+}
+
+#quantidade_carrinho {
+    display: inline;
+    color: white;
+    font-size: 1.2rem;
+    margin-top: auto;
+    margin-bottom: auto;
+}
+/* FIM cabeçalho */
+/* Login */
+main {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.topo {
+    font-size: 2rem;
+    margin: 2rem;
+    text-align: center;
+}
+.cadastro {
+    padding: 1rem;
+    box-shadow: 5px 5px 15px rgba(0, 0, 0, 0.212);
+    width: 500px;
+    border-radius: 10px;
+    margin: 2rem;
+    height: auto;
+}
+.logado {
+    display: none;
+}
+.input-group {
+    margin: 2rem;
+}
+.input-box {
+    margin-bottom: 10px;
+    padding-bottom: 20px;
+    position: relative;
+}
+.input-box label {
+    display: inline-block;
+    margin-bottom: 5px;
+    color: #828CAD;
+}
+.input-box input {
+    border: 2px solid #3E445B;
+    border-radius: 10px;
+    outline: 0;
+    display: block;
+    font-size: 14px;
+    width: 100%;
+    padding: 15px;
+}
+.input-box.success input {
+    border: 3px solid #4ECA64;
+}
+.input-box.error input {
+    border: 3px solid #DB5A5A;
+}
+.input-box.error i.img-error {
+    visibility: visible;
+}
+.input-box.success i.img-success {
+    visibility: visible;
+}
+.input-box.error small {
+    color: #DB5A5A;
+    visibility: visible;
+}
+.input-box {
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 1rem;
+}
+.input-box i {
+    position: absolute;
+    top: 40px;
+    right: 14px;
+    visibility: hidden;
+}
+.input-box small {
+    visibility: hidden;
+    position: absolute;
+    margin: 80px 0 0 5px;
+    font-size: 14px;
+}
+input::placeholder {
+    color: rgba(0, 0, 0, 0.3);
+}
+div button {
+    width: 100%;
+    font-weight: 700;
+    margin-bottom: 2rem;
+    background-color: green;
+    border-radius: 10px;
+    color: white;
+    height: 2.5rem;
+    border: none;
+    box-shadow: 5px 5px 15px rgba(0, 0, 0, 0.3);
+    cursor: pointer;
+}
+div button:hover {
+    color: black;
+}
+div button:last-child {
+    margin: 0;
+}
+div button.busca {
+    margin: 2rem 0 0 0;
+    width: 100%;
+}
+/* FIM Login */
+/* Rodapé */
+#container_rodape {
+    display: flex;
+    justify-content: left;
+    padding-top: .5rem;
+    padding-bottom: .5rem;
+}
+footer {
+    background-color: rgb(2, 75, 2);
+    margin-top: 2rem;
+    color: white;
+}
+.icone {
+    width: 35px;
+    padding: 10px 10px 10px 0;
+}
+.contato {
+    display: flex;
+    align-items: center;
+    color: white;
+}
+.contato:link {
+    text-decoration: none;
+}
+li a {
+    text-decoration: none;
+    color: white;
+}
+ul:first {
+    width: 70%;
+    text-align: left;
+}
+ul {
+    margin: 0;
+}
+/* FIM Rodapé */
+@media screen and (max-width: 950px) {
+    /* Cabeçalho */
+    .pagina {
+        margin-right: 2rem;
+    }
+    .logo {
+        left: 0;
+        display: block;
+        margin-left: auto;
+        margin-right: auto;
+    }
+    nav {
+        right: 0;
+        float: none;
+        margin-top: 1rem;
+        text-align: center;
+        padding-right: 0;
+    }
+    /* FIM Cabeçalho */
+}
+@media screen and (max-width: 768px) {
+    /* Cabeçalho */
+    .pagina {
+        margin-right: 2rem;
+    }
+    .logo {
+        left: 0;
+        display: block;
+        margin-left: auto;
+        margin-right: auto;
+    }
+    nav {
+        right: 0;
+        float: none;
+        margin-top: 1rem;
+        text-align: center;
+        padding-right: 0;
+    }
+    /* FIM Cabeçalho */
+    /* Rodape */
+    .contato {
+        font-size: .9rem;
+    }
+    ul {
+        padding-left: 1rem;
+    }
+    /* FIM Rodape */
+}
+@media screen and (max-width: 660px) {
+    /* Cabeçalho */
+    nav {
+        padding-bottom: .5rem;
+        margin-top: 1rem;
+        padding-right: 1rem;
+    }
+    .pagina {
+        margin-left: auto;
+        margin-right: auto;
+        margin-bottom: 1rem;
+        display: block;
+        width: 50%;
+    }
+    .pagina:last-child {
+        margin-bottom: 0rem;
+    }
+    /* FIM Cabeçalho */
+    /* Login */
+    .cadastro {
+        width: 350px;
+    }
+    /* FIM Login */
+    /* Rodape */
+    #container_rodape {
+        display: block;
+    }
+    ul {
+        padding-bottom: 0;
+        padding-top: 0;
+        width: auto;
+        padding-left: .8rem;
+    }
+    .contato {
+        justify-content: center;
+    }
+    /* FIM Rodape */
+}
+@media screen and (max-width: 320px) {
+    /* Cabeçalho */
+    .logo {
+        left: 0;
+    }
+    nav {
+        margin-top: 0.5rem;
+        float: none;
+        right: 0;
+        padding-right: 1rem;
+    }
+    .pagina {
+        margin-left: 0;
+        margin-right: 0;
+        display: block;
+        width: 100%;
+    }
+    /* FIM Cabeçalho */
+    /* Login */
+    .cadastro {
+        width: 300px;
+    }
+    /* FIM Login */
+    /* Rodape */
+    footer {
+        display: block;
+    }
+    ul {
+        padding-bottom: 0;
+        padding-top: 0;
+        width: auto;
+        padding-left: .3rem;
+    }
+    .contato {
+        justify-content: left;
+    }
+    #container_rodape {
+        font-size: .8rem;
+        padding-top: 1rem;
+        padding-bottom: 1rem;
+    }
+    /* FIM Rodape */
+}

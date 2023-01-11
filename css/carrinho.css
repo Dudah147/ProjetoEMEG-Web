@@ -1,0 +1,470 @@
+* {
+    box-sizing: border-box;
+    font-family: 'Trebuchet MS';
+}
+body {
+    background: #fff;
+    font-size: 16px;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+/* cabeçalho */
+
+header{
+    background-color: rgb(2, 75, 2);
+    padding-bottom: .5rem;
+}
+.logo{
+    position: relative;
+    left: 2rem;
+    top: .5rem;
+}
+nav{
+    margin-top: 2.5rem;
+    font-size: 1.3rem;
+    float: right;
+    position: relative;
+    right: 2rem;
+    width: auto;
+}
+a:hover {
+    color: black;
+}
+.pagina {
+    display: inline;
+    margin-right: 1rem;
+    color: white;
+    border-radius: 8px;
+}
+.pagina:link {
+    text-decoration: none;
+}
+.ultimo{
+    margin-right: 0;
+}
+
+#img_carrinho_nav {
+    display: inline;
+    width: 1.5rem;
+    margin-top: auto;
+    margin-bottom: auto;
+}
+
+#quantidade_carrinho {
+    display: inline;
+    color: white;
+    font-size: 1.2rem;
+    margin-top: auto;
+    margin-bottom: auto;
+}
+/* FIM cabeçalho */
+
+
+/* Main */
+main{
+    margin-top: 5rem;
+    margin-bottom: 5rem;
+}
+
+#carrinho_vazio{
+    font-size: 3rem;
+    text-align: center;
+    margin-bottom: 4rem;
+}
+#carrinho{
+    width: 15%;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.conteudo_produto{
+    font-size: 1.5rem;
+    width: 70%;
+    display: flex;
+    padding-left: 1rem;
+    padding-top: 0.5rem;
+    padding-bottom: 0.5rem;
+    justify-content:space-between;
+    position: relative;
+}
+.img_produto img{
+    width: 3rem;
+    height: 4rem;
+}
+.nome_produto{
+    margin-top: auto;
+    margin-bottom: auto;
+    width: 200px;
+    text-align: center;
+}
+.nome_produto span{
+    width: auto;
+    margin-bottom: 0;
+    text-align: center;
+}
+.preco_produto{
+    margin-top: auto;
+    margin-bottom: auto;
+    text-align: center;
+    width: 150px;
+}
+
+.quantidade{
+    text-align: center;
+    margin-top: auto;
+    margin-bottom: auto;
+}
+.aumentar, .diminuir{
+    cursor: pointer;
+    width: 1rem;
+    display: block;
+}
+.aumentar{
+    margin-bottom: .5rem;
+}
+.diminuir{
+    margin-top: .5rem;
+}
+
+.remover{
+    margin-top: auto;
+    margin-bottom: auto;
+    width: 2.5rem;
+    height: 2.5rem;
+    cursor: pointer;
+}
+
+#limpar_carrinho{
+    width: 10rem;
+    padding: .8rem .3rem;
+    font-weight: 500;
+    text-align: center;
+    border-radius: 3px;
+    margin-top: 2rem;
+    border: 2px solid rgba(0, 0, 0, 0.684);
+    background-color: rgb(2, 75, 2);
+    font-size: 1rem;
+    color: white;
+    cursor: pointer;
+}
+.novo_produto:first-child{
+    margin-top: 0;
+}
+.novo_produto{
+    margin-top: 1.5rem;
+    box-shadow: 2px 2px 5px #80808086;
+    justify-content:space-around;
+    display:flex;
+}
+
+#container{
+    display: flex;
+    justify-content: space-around;
+    padding-top: 2rem;
+}
+
+#container_produtos{
+    display: block;
+    width: 63%;
+}
+
+
+#finalizacao{
+    width: 30%;
+    height: 100%;
+    box-shadow: 2px 2px 5px #80808086;
+    display: block;
+}
+
+#linha{
+    display: block;
+}
+
+#text_resumo{
+    font-size: 2rem;
+    font-weight: bold;
+    text-align: center;
+    width: 100%;
+    display: inline-block;
+    height: 3rem;
+    margin-top: .6rem;
+    margin-bottom: 2rem;
+}
+.total{
+    display: flex;
+    justify-content: space-between;
+    font-size: 1.2rem;
+}
+.valor_total{
+    margin-top: 1rem;
+    background-color: rgb(10, 119, 10);
+    color: white;
+    height: 3rem;
+}
+.valor_total span, .valor_total strong{
+    margin-top: auto;
+    margin-bottom: auto;
+    margin-left: .8rem;
+    margin-right: .8rem;
+}
+.quantidade_total span, .quantidade_total strong{
+    margin-top: .8rem;
+    margin-left: .8rem;
+    margin-right: .8rem;
+}
+
+#cupom{
+    margin-top: 1rem;
+    margin-left: .8rem;
+    margin-right: .8rem;
+}
+#cupom label{
+    font-size: 1.2rem;
+    margin-bottom: .3rem;
+    display: inline-block;
+}
+
+#cupom input{
+    display: block;
+    width: 100%;
+    font-size: 1.2rem;
+    
+}
+#aplicar_cupom{
+    margin-top: .4rem;
+    padding-top: .25rem;
+    font-size: 1rem;
+    width: 50%;
+    height: 1.8rem;
+    background-color: rgb(212, 212, 212);
+    border-radius: 3px;
+    display: inline-block;
+    text-align: center;
+    cursor: pointer;
+}
+
+#botao_compra{
+    margin-top: 1.3rem;
+    margin-left: .8rem;
+    margin-right: .8rem;
+    margin-bottom: .6rem;
+    color: white;
+    background-color: rgb(2, 75, 2);
+    font-size: 1.3rem;
+    border: 0;
+    border-radius: 3px;
+    width: 90%;
+    height: 2rem;
+    cursor: pointer;
+}
+
+@keyframes hide {
+  from { opacity: 1 }
+  to   { opacity: 0 }
+}
+
+#div_mensagem{
+    animation: hide 1s 4s forwards;
+    text-align: center;
+    font-size: 2rem;
+}
+/* FIM Main */
+
+
+/* Rodapé */
+#container_rodape {
+    display: flex;
+    justify-content: left;
+    padding-top: .5rem;
+    padding-bottom: .5rem;
+}
+footer {
+    background-color: rgb(2, 75, 2);
+    margin-top: 2rem;
+    color: white;
+}
+.icone {
+    width: 35px;
+    padding: 10px 10px 10px 0;
+}
+.contato {
+    display: flex;
+    align-items: center;
+    color: white;
+}
+.contato:link {
+    text-decoration: none;
+}
+li a {
+    text-decoration: none;
+    color: white;
+}
+ul:first {
+    width: 70%;
+    text-align: left;
+}
+ul {
+    margin: 0;
+}
+/* FIM Rodapé */
+@media screen and (max-width: 950px) {
+    /* Cabeçalho */
+    .pagina {
+        margin-right: 2rem;
+    }
+    .logo {
+        left: 0;
+        display: block;
+        margin-left: auto;
+        margin-right: auto;
+    }
+    nav {
+        right: 0;
+        float: none;
+        margin-top: 1rem;
+        text-align: center;
+        padding-right: 0;
+    }
+    /* FIM Cabeçalho */
+}
+@media screen and (max-width: 768px) {
+    /* Cabeçalho */
+    .pagina {
+        margin-right: 2rem;
+    }
+    .logo {
+        left: 0;
+        display: block;
+        margin-left: auto;
+        margin-right: auto;
+    }
+    nav {
+        right: 0;
+        float: none;
+        margin-top: 1rem;
+        text-align: center;
+        padding-right: 0;
+    }
+    /* FIM Cabeçalho */
+    #carrinho{
+        width: 25%;
+    }
+    #aplicar_cupom{
+        width: 100%;
+    }
+    #container{
+        flex-wrap: wrap;
+    }
+    #finalizacao{
+        
+        max-width: 280px;
+        width: 100%;
+        margin-top: 1.5rem;
+    }
+    /* Rodape */
+    .contato {
+        font-size: .9rem;
+    }
+    ul {
+        padding-left: 1rem;
+    }
+    /* FIM Rodape */
+}
+@media screen and (max-width: 660px) {
+    /* Cabeçalho */
+    nav {
+        padding-bottom: .5rem;
+        margin-top: 1rem;
+        padding-right: 1rem;
+    }
+    .pagina {
+        margin-left: auto;
+        margin-right: auto;
+        margin-bottom: 1rem;
+        display: block;
+        width: 50%;
+    }
+    .pagina:last-child {
+        margin-bottom: 0rem;
+    }
+    /* FIM Cabeçalho */
+    #container_produtos{
+        width: 100%;
+    }
+    #carrinho{
+        width: 30%;
+    }
+    .conteudo_produto{
+        font-size: 1rem;
+    }
+    .novo_produto{
+        width: 100%;
+    }
+    #limpar_carrinho{
+        font-size: 1rem;
+    }
+    /* Rodape */
+    #container_rodape {
+        display: block;
+    }
+    ul {
+        padding-bottom: 0;
+        padding-top: 0;
+        width: auto;
+        padding-left: .8rem;
+    }
+    .contato {
+        justify-content: center;
+    }
+    /* FIM Rodape */
+}
+@media screen and (max-width: 320px) {
+    /* Cabeçalho */
+    .logo {
+        left: 0;
+    }
+    nav {
+        margin-top: 0.5rem;
+        float: none;
+        right: 0;
+        padding-right: 1rem;
+    }
+    .pagina {
+        margin-left: 0;
+        margin-right: 0;
+        display: block;
+        width: 100%;
+    }
+    /* FIM Cabeçalho */
+    main h1{
+        font-size: 2rem;
+        margin-bottom: 2rem;
+    }
+    #carrinho{
+        width: 40%;
+    }
+    .novo_produto{
+        flex-wrap: wrap-reverse;
+        justify-content: space-evenly;
+    }
+    /* Rodape */
+    footer {
+        display: block;
+    }
+    ul {
+        padding-bottom: 0;
+        padding-top: 0;
+        width: auto;
+        padding-left: .3rem;
+    }
+    .contato {
+        justify-content: left;
+    }
+    #container_rodape {
+        font-size: .8rem;
+        padding-top: 1rem;
+        padding-bottom: 1rem;
+    }
+    /* FIM Rodape */
+}
